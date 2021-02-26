@@ -1,0 +1,51 @@
+{
+    "name": "sheenazien8/livewire-components",
+    "description": "Livewire Components",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "sheenazien8",
+            "email": "sheenazien08@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^7.0.0",
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Sheenazien8\\LivewireComponents\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sheenazien8\\LivewireComponents\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sheenazien8\\LivewireComponents\\LivewireComponentsServiceProvider"
+            ],
+            "aliases": {
+                "LivewireComponents": "Sheenazien8\\LivewireComponents\\LivewireComponentsFacade"
+            }
+        }
+    }
+}
