@@ -1,6 +1,6 @@
 # livewire-components
 Laravel Form Builder Livewire Components
-# WI PROJECT!!!
+# PROJECT WIP!!!
 
 ## Installation
 
