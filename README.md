@@ -63,7 +63,7 @@ public function register()
 ```
 And finally you can render the view where you want:
 ```blade.php
-{{ Builder::make('login-form')->render() }}
+{{ Builder::make('login-form')->setRoute(route('login'))->render() }}
 ```
 
 ### Testing
