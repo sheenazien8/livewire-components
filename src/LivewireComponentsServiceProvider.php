@@ -4,7 +4,6 @@ namespace Sheenazien8\LivewireComponents;
 
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use Sheenazien8\LivewireComponents\Livewire\From;
 
 /**
  * Class LivewireComponentsServiceProiveder
@@ -15,7 +14,7 @@ class LivewireComponentsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'livewirecomponents');
-        Livewire::component('form', From::class);
+        Livewire::component('form', \Sheenazien8\LivewireComponents\Livewire\From::class);
     }
 
     public function register()
