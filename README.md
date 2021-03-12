@@ -36,12 +36,31 @@ class LoginForm extends ComponentAbstracts
                 'type' => 'text',
                 'label' => trans('app.auth.label.email'),
                 'placeholder' => trans('app.auth.placeholder.email'),
+                'value' => $this->value->foo
             ],
             'password' => [
                 'type' => 'password',
                 'label' => trans('app.auth.label.password'),
                 'placeholder' => trans('app.auth.placeholder.password'),
+                'value' => $this->value->bar
             ],
+        ];
+    }
+    public function buttons(): array
+    {
+        return [
+            [
+                'label' => trans('app.global.submit'),
+                'color' => 'primary'
+            ],
+        ];
+    }
+
+    public function validations(): array
+    {
+        return [
+            'email' => ['required', 'email:rfc,dns'],
+            'password' => ['min:3']
         ];
     }
 }
@@ -63,7 +82,7 @@ public function register()
 ```
 And finally you can render the view where you want:
 ```blade.php
-{{ Builder::make('login-form')->setRoute(route('login'))->render() }}
+{{ Builder::make('login-form')->setRoute(route('login'), $method)->setDefaultvalue($data)->render() }}
 ```
 
 ### Testing
