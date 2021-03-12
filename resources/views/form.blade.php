@@ -1,3 +1,2 @@
-<div>
-  @livewire('form', $builder)
-</div>
+@livewire('form', $builder)
+{{-- <livewire:form :builder="$builder"/> --}}
