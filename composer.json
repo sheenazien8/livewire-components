@@ -16,7 +16,8 @@
     },
     "require-dev": {
         "orchestra/testbench": "^5.0",
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "^8.0",
+        "livewire/livewire": "^2.4"
     },
     "autoload": {
         "files": [
