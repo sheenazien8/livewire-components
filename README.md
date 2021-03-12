@@ -21,8 +21,6 @@ composer require sheenazien8/livewire-components
 ## Usage
 Create a form at ```app\Forms\LoginForm.php```:
 ```php
-<?php
-
 namespace App\Forms;
 
 use Sheenazien8\LivewireComponents\Abstracts\ComponentAbstracts;
