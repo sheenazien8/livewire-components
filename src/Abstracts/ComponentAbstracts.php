@@ -167,7 +167,7 @@ abstract class ComponentAbstracts implements ComponentContract
      * @param mix $value
      * @return ComponentAbstracts
      */
-    public function setDefaultValue(array $value)
+    public function setDefaultValue(array $value = null)
     {
         $this->value = $value;
 
