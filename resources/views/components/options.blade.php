@@ -1,6 +1,9 @@
 <div>
   <div class="form-group">
     <label for="id-{{ $name }}">{{ $row['label'] ?? '' }}</label>
+    @if (isset($row['view']) && $row['view'] instanceof \Illuminate\View\View)
+      {{ $row['view'] }}
+    @endif
     <select wire:model.lazy="{{ $name }}"
             class="form-control @error($name) is-invalid @enderror"
             id="id-{{ $name }}"

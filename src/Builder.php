@@ -120,10 +120,10 @@ class Builder
     /**
      * Setter for DefaultValue
      *
-     * @param mix $value
+     * @param array $value
      * @return Builder
      */
-    public function setDefaultValue($value = null)
+    public function setDefaultValue(array $value = null)
     {
         $this->value = $value;
 
@@ -133,7 +133,7 @@ class Builder
     /**
      * Getter for DefaultValue
      *
-     * @return string
+     * @return mix
      */
     public function getDefaultValue()
     {

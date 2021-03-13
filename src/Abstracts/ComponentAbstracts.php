@@ -2,6 +2,7 @@
 
 namespace Sheenazien8\LivewireComponents\Abstracts;
 
+use Illuminate\Support\Collection;
 use Sheenazien8\LivewireComponents\Contracts\ComponentContract;
 
 /**
@@ -166,7 +167,7 @@ abstract class ComponentAbstracts implements ComponentContract
      * @param mix $value
      * @return ComponentAbstracts
      */
-    public function setDefaultValue($value)
+    public function setDefaultValue(array $value)
     {
         $this->value = $value;
 
@@ -181,6 +182,16 @@ abstract class ComponentAbstracts implements ComponentContract
     public function getDefaultValue()
     {
         return $this->value;
+    }
+
+    /**
+     * Getter for Value
+     *
+     * @return Collection
+     */
+    public function getCollectionValue(): Collection
+    {
+        return collect($this->value);
     }
 
     /**
