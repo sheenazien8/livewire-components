@@ -1,6 +1,6 @@
-<div align="center">
+<div align="">
 
-<a href="https://github.com/sheenazien8/livewire-components"><img src="https://i.ibb.co/bFXKnQN/Group-1.png" style="margin: 20px auto 10px" width="60"></a>
+<a href="https://github.com/sheenazien8/livewire-components"><img src="https://i.ibb.co/bFXKnQN/Group-1.png" style="margin: 20px auto 10px" width="90"></a>
 
 </div>
 
@@ -116,12 +116,14 @@ And finally you can render the view where you want:
 |   | info  | String\|null    |
 |   | option  | Array\|null    |
 |   | view  | \Illuminate\View\View    |
+
 ```public function buttons(): array```
 | Attribute     | Type Hint     |
 | :---------- | :----------- |
 | Label  | String\|null    |
 | color  | String\|mull    |
 | link  | String\|mull    |
+
 ```public function validations(): array```
 You can use available validation rule laravel [Available Rule](https://laravel.com/docs/7.x/validation#available-validation-rules)
 ## Secret Use
