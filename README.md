@@ -54,6 +54,7 @@ class LoginForm extends ComponentAbstracts
             ],
         ];
     }
+    
     public function buttons(): array
     {
         return [
