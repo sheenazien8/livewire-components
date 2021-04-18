@@ -3,12 +3,12 @@
     <label for="id-{{ $name }}">{{ $row['label'] ?? '' }}</label>
     @if ($row['type'] == 'textarea')
       <textarea type="{{ $row['type'] }}"
-           wire:model.lazy="{{ $name }}"
-           class="form-control @error($name) is-invalid @enderror"
-           id="id-{{ $name }}"
-           name="{{ $name }}"
-           placeholder="{{ $row['placeholder'] ?? null }}"
-        >{{ old($name, $row['value'] ?? null) }}</textarea>
+                wire:model.lazy="{{'key.'.$name}}"
+                class="form-control @error('key.'.$name) is-invalid @enderror @error($name) is-invalid @enderror"
+                id="id-{{ $name }}"
+                name="{{ $name }}"
+                placeholder="{{ $row['placeholder'] ?? null }}"
+                >{{ old($name, $row['value'] ?? null) }}</textarea>
     @else
       @if (isset($row['view']) && $row['view'] instanceof \Illuminate\View\View)
         {{ $row['view'] }}

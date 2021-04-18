@@ -133,7 +133,7 @@ class Builder
     /**
      * Getter for DefaultValue
      *
-     * @return mix
+     * @return mix|array|null
      */
     public function getDefaultValue()
     {
@@ -158,5 +158,5 @@ class Builder
             ->build();
 
         return view('livewirecomponents::form', compact('builder'));
-    } // End function createForm
+    }
 }

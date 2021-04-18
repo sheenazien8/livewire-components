@@ -27,12 +27,16 @@ class From extends Component
 
     public function mount()
     {
-        $old = [];
+        $default_field = [];
         foreach (array_keys($this->schema) as $key_name) {
-            $old[$key_name] = old($key_name);
+            if ($this->schema[$key_name]['value']) {
+                $default_field[$key_name] = $this->schema[$key_name]['value'];
+            } else {
+                $default_field[$key_name] = old($key_name);
+            }
         }
         $this->fill([
-            'key' => $old
+            'key' => $default_field
         ]);
     }
 

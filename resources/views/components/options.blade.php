@@ -4,8 +4,8 @@
     @if (isset($row['view']) && $row['view'] instanceof \Illuminate\View\View)
       {{ $row['view'] }}
     @endif
-    <select wire:model.lazy="{{ $name }}"
-            class="form-control @error($name) is-invalid @enderror"
+    <select wire:model.lazy="{{ 'key.'.$name }}"
+            class="form-control @error('key.'.$name) is-invalid @enderror"
             id="id-{{ $name }}"
             name="{{ $name }}"
             placeholder="{{ $row['placeholder'] ?? null }}"

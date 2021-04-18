@@ -169,7 +169,7 @@ abstract class ComponentAbstracts implements ComponentContract
      */
     public function setDefaultValue(array $value = null)
     {
-        $this->value = $value;
+        $this->value = $this->mapKeyValue($value);
 
         return $this;
     }
@@ -210,5 +210,17 @@ abstract class ComponentAbstracts implements ComponentContract
             'button' => $this->getButton(),
             'value' => $this->getDefaultValue(),
         ];
-    } // End function build
+    }
+
+    /**
+     * mapKeyValue
+     *
+     * @param mixed $value
+     * @access private
+     * @return mix
+     */
+    private function mapKeyValue($value)
+    {
+        return (object)$value;
+    }
 }
