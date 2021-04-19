@@ -95,35 +95,40 @@ And finally you can render the view where you want:
 ```
 
 ## Availables key
-```public function builder(): array```
-| Type       | Attribute     | Type Hint     |
-| :------------- | :---------- | :----------- |
-|  text\|password\|number\|textarea | Label  | String\|null    |
-|   | placeholder  | String\|mull    |
-|   | value  | mix    |
-|   | info  | String\|null    |
-|   | view  | \Illuminate\View\View    |
-|  radio\|checkbox | label  | String\|null    |
-|   | value  | mix    |
-|  file | label  | String\|null    |
-|   | placeholder  | String\|mull    |
-|   | value  | mix    |
-|   | info  | String\|null    |
-|   | accept  | String\|null    |
-|   | view  | \Illuminate\View\View    |
-|  options\|select | label  | String\|null    |
-|   | placeholder  | String\|mull    |
-|   | value  | mix    |
-|   | info  | String\|null    |
-|   | option  | Array\|null    |
-|   | view  | \Illuminate\View\View    |
+```php
+public function builder(): array
+```
 
-```public function buttons(): array```
-| Attribute     | Type Hint     |
-| :---------- | :----------- |
-| Label  | String\|null    |
-| color  | String\|mull    |
-| link  | String\|mull    |
+| Type           | Attribute   | Type Hint             |          |       |         |      |
+| :------------- | :---------- | :-----------          |          |       |         |      |
+| text\          | password\   | number\               | textarea | Label | String\ | null |
+|                | placeholder | String\               | mull     |       |         |      |
+|                | value       | mix                   |          |       |         |      |
+|                | info        | String\               | null     |       |         |      |
+|                | view        | \Illuminate\View\View |          |       |         |      |
+| radio\         | checkbox    | label                 | String\  | null  |         |      |
+|                | value       | mix                   |          |       |         |      |
+| file           | label       | String\               | null     |       |         |      |
+|                | placeholder | String\               | mull     |       |         |      |
+|                | value       | mix                   |          |       |         |      |
+|                | info        | String\               | null     |       |         |      |
+|                | accept      | String\               | null     |       |         |      |
+|                | view        | \Illuminate\View\View |          |       |         |      |
+| options\       | select      | label                 | String\  | null  |         |      |
+|                | placeholder | String\               | mull     |       |         |      |
+|                | value       | mix                   |          |       |         |      |
+|                | info        | String\               | null     |       |         |      |
+|                | option      | Array\                | null     |       |         |      |
+|                | view        | \Illuminate\View\View |          |       |         |      |
+
+```php 
+public function buttons(): array
+```
+| Attribute   | Type Hint    |      |
+| :---------- | :----------- |      |
+| Label       | String\      | null |
+| color       | String\      | mull |
+| link        | String\      | mull |
 
 ```public function validations(): array```
 You can use available validation rule laravel [Available Rule](https://laravel.com/docs/7.x/validation#available-validation-rules)
@@ -146,3 +151,4 @@ composer test
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
