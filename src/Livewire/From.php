@@ -6,6 +6,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 /**
  * Class From
@@ -13,6 +14,8 @@ use Livewire\Component;
  */
 class From extends Component
 {
+    use WithFileUploads;
+
     public $route;
 
     public $schema;

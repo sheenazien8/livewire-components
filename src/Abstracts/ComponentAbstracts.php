@@ -32,7 +32,7 @@ abstract class ComponentAbstracts implements ComponentContract
     public function builder(): array
     {
         return [];
-    } // End function builder
+    }
 
     /**
      * buttons
